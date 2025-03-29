@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1743218177 source:c:\users\ramal\onedrive\Área de trabalho\programação avançada\root\warmup\solver\warmup_solver.c
+	"../include/warmup_solver.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1743214197 c:\users\ramal\onedrive\Área de trabalho\programação avançada\root\warmup\include\warmup_solver.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1743214197 source:c:\users\ramal\onedrive\Área de trabalho\programação avançada\root\warmup\warmup.c
+	<stdio.h>
+	<dirent.h>
+	<string.h>
+	"include/warmup_solver.h"
+
