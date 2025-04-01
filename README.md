@@ -178,3 +178,51 @@ git config --global user.email "lucasramalho2004@hotmail.com"
 
 ramal@DESKTOP-3NJVFL5 MINGW64 ~
 $
+
+
+
+
+Alterações no código: README - Alterações no Código Warmup Solver
+
+Visão Geral
+
+Este documento descreve as principais alterações realizadas na implementação da função solve_warmup e check_warmup_solution do arquivo warmup_solver.c. As modificações visam melhorar a segurança, eficiência e funcionalidade do código.
+
+Principais Alterações
+
+1. Correção de Buffer Overflow
+
+O tamanho do buffer out_file foi aumentado de 100 para 200 caracteres para evitar estouro de buffer.
+
+Foi removida a concatenação insegura de strings usando strcat(out_file, warmup_instance), evitando a possibilidade de sobreposição de memória.
+
+
+2. Implementação da Lógica de Processamento
+
+Antes, a função solve_warmup apenas copiava os dados do arquivo de resposta para o arquivo de solução sem realizar nenhum processamento.
+
+Agora, o programa lê a string do arquivo de entrada, processa os números contidos nela e calcula a média dos valores.
+
+Implementação da lógica para interpretar corretamente o número 10 e somá-lo de forma apropriada.
+
+
+3. Melhor Tratamento de Erros
+
+Mensagens de erro detalhadas foram adicionadas para informar ao usuário quando não é possível abrir um arquivo.
+
+Se a string de entrada estiver vazia ou não contiver números válidos, uma mensagem de erro é gravada no arquivo de solução.
+
+O programa agora encerra corretamente os arquivos em caso de erro para evitar vazamento de recursos.
+
+
+4. Correção na Comparação das Soluções
+
+Na versão anterior, a função check_warmup_solution podia falhar na leitura de linhas vazias.
+
+Agora, ambas as linhas dos arquivos são comparadas corretamente, garantindo que todo o conteúdo seja verificado.
+
+
+Resumo das Melhorias
+
+Essas melhorias tornam o programa mais seguro, confiável e funcional.
+
